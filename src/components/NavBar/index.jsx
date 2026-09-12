@@ -9,10 +9,8 @@ import { motion } from "framer-motion";
 import useDarkMode from "../../hooks/useDarkMode";
 
 const socials = [
-  { logo: images.linkedinIcon, alt: "LinkedIn", link: "https://www.linkedin.com/in/dhruv-chandna/" },
-  { logo: images.githubIcon, alt: "GitHub", link: "https://github.com/dhruvjwc24" },
-  { logo: images.mediumIcon, alt: "Medium", link: "https://medium.com/@dhruvjwc" },
-  { logo: images.emailIcon, alt: "Email", link: "mailto:dhruvjwc@umich.edu" },
+  { logo: images.linkedinIcon, alt: "LinkedIn", link: "https://www.linkedin.com/in/jacob-voetberg" },
+  { logo: images.emailIcon, alt: "Email", link: "mailto:Jacobvo@umich.edu" },
 ];
 
 const navlinks = [
@@ -82,7 +80,7 @@ export default function NavBar() {
         <div className="flex justify-end items-center px-0 py-4 gap-4 sm:px-6 lg:py-8 lg:gap-10">
           <div className="mr-auto">
             <a href="#home" className="text-primary font-display text-2xl dark:text-white hover:opacity-80 transition-opacity">
-              DHRUV C.
+              JACOB V.
             </a>
           </div>
           <div className="hidden lg:flex items-center gap-4">

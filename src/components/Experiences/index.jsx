@@ -4,31 +4,65 @@ import { motion } from "framer-motion";
 
 const cardData = [
   {
-    company: "Effluent, The Wastewater Intelligence Company",
-    period: "Jun. 2026 – Jul. 2026",
-    role: "Product & Go-to-Market Lead",
+    company: "Ross School of Business (Business + Impact)",
+    link: "https://businessimpact.umich.edu/",
+    period: "2026 – Present",
+    role: "Marketing Storyteller",
     duties: [
-      "Co-developed eSMR automation that maps laboratory results from LIMS into CIWQS-ready reports, reducing an error-prone process from up to 40 hours per month to approximately 10 minutes (~99.6% reduction).",
-      "Fine-tuned a Multivariate Time-Series Graph Neural Network (MTGNN) on BSM2-generated wastewater data to detect anomalies across multivariate SCADA and plant-historian streams.",
-      "Led Bay Area go-to-market efforts by organizing 17 wastewater-facility tours and translating operator feedback into product requirements, pilots, and customer opportunities.",
+      "Directed brand management by establishing consistent content and appearance across social media strategy to build organizational recognition among donors, sponsors, and students.",
+      "Created cross-platform content strategy and executed content creation through authentic testimonials and business showcases to promote club visibility and drive student applications.",
     ]
   },
   {
-    company: "Aspiring Scientists Summer Internship Program (George Mason University)",
-    period: "Jun. 2024 – Aug. 2024",
-    role: "Data Analyst",
+    company: "Milieu Skin",
+    link: "https://superbio.me/",
+    period: "2026 – Present",
+    role: "Marketing Freelancer",
     duties: [
-      "Built a BigQuery (GCP) SQL analytics pipeline on GH Archive to extract GitHub interaction telemetry for 660 blockchain OSS organizations (2013–2024), producing a longitudinal dataset for ecosystem-scale evaluation.",
-      "Defined and computed a normalized success KPI (Activity Valuation) by filtering bot activity and calculating avg((sum (non-bot interactions) / (years active))); segmented results by Project Type, Funding Model, and Governance Mode to identify the most consistently high-performing organizational profiles.",
+      "Led brainstorm sessions with storefront team by studying social media trends, brand identity, and customer profiles to identify new methods for driving in-person engagement and sales.",
+      "Captured authentic, engaging content by giving viewers a behind-the-scenes look at the formulation and packaging process to create brand reputation, loyalty, and engagement.",
+      "Documented the business development process by collaborating with leadership team to document the process and struggle that went into achieving a $1.1m pre-seed round.",
     ]
   },
   {
-    company: "Emerging Diagnostic and Investigative Technologies (Dartmouth Hitchcock Medical Center)",
-    period: "Jun. 2023 – Aug. 2023",
-    role: "Machine Learning Engineer",
+    company: "Cre.ade",
+    link: "https://creadestore.com/",
+    period: "2026 – Present",
+    role: "Marketing & Outreach Lead",
     duties: [
-      "Trained a self-supervised whole-slide-image encoder in PyTorch and Lightly using SimCLR on 780K+ unlabeled tissue patches across 78 tar shards, applying dual-view augmentation and NT-Xent loss.",
-      "Built a multimodal case-retrieval system combining CNN–GNN slide embeddings with a fine-tuned BERT report encoder and kNN cosine search, returning clinically similar cases validated by expert pathologists."
+      "Formulated brand content strategy by coordinating input from 3 teammates and interviewing 5+ customers to ensure effective positioning and validate ideas for initial funding pitches.",
+      "Shot, edited, and posted original content by connecting with strangers authentically about their pain points and sharing our solutions to build authority and validate product efficacy.",
+      "Established retail contacts with 3+ locations through cold sales, pilot programs, and wholesale deals to build in-person product presence and recognition throughout the West Michigan Area.",
+    ]
+  },
+  {
+    company: "Michigan Healthcare and Business Club",
+    link: "https://www.mhbcumich.com/?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAcGRvZgJleHRuA2FlbQIxMQBzcnRjBmFwcF9pZA85MzY2MTk3NDMzOTI0NTkAAadBXyx_Oo5psTxskbg7_jufycrQMKrA2rgdCwICOPbfo1J5RfrUr9Niw04sQg_aem_J_spuo36-EuA0CpMx4D-RA",
+    period: "2026 – Present",
+    role: "Vice President of External Affairs",
+    duties: [
+      "Directed 3-person team to manage club presence and reputation by rebuilding club website and posting new social media campaign to maximize exposure and student engagement.",
+      "Led coordination of New York career trek by cold emailing 100+ firms, coordinating funding team, establishing travel logistics to offer maximum club value and career opportunities.",
+    ]
+  },
+  {
+    company: "Purpose Training Studio",
+    period: "2026",
+    role: "Marketing & Business Operations Intern",
+    duties: [
+      "Overhauled existing website and copy by collaborating with leadership, refining style, and capturing photos and videos to decrease friction and increase lead generation overnight.",
+      "Created and refined content strategy plan by collaborating with training team, discovering ICP pain points, and refining business niche understanding to build brand and website traffic.",
+    ]
+  },
+  {
+    company: "Elevate Studio",
+    period: "Summer 2024",
+    role: "Business Intern",
+    duties: [
+      "Assessed buildings with lead architects to verify accuracy and safety for future projects.",
+      "Collaborated with clients to come up with designs that fitted their needs and budget.",
+      "Identified materials for designs and created cost estimates to be used by lead architects.",
+      "Created presentations for experts to show the changing nature of the architecture industry.",
     ]
   }
 ];
@@ -87,9 +121,6 @@ const TwoColumnCard = () => {
    ))}
 
   </motion.div>
-  <p className="text-center text-neutral-600 dark:text-neutral-300 text-md mt-8 w-full">
-    For details on my experiences, please contact me for my official resume.
-  </p>
   </>
  );
 };

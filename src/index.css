@@ -104,8 +104,8 @@
   }
 
   .hero__heading::after {
-    @apply text-base text-primary-400 font-medium font-default absolute -bottom-6 -right-10 sm:text-base dark:text-opacity-80 dark:text-white;
-    content: "SOFTWARE ENGINEER";
+    @apply whitespace-nowrap text-[9px] tracking-wide text-primary-400 font-medium font-default absolute -bottom-4 -right-2 sm:text-base sm:-bottom-6 sm:-right-10 sm:tracking-normal dark:text-opacity-80 dark:text-white;
+    content: "MARKETING & BRAND STRATEGY";
   }
 }
 

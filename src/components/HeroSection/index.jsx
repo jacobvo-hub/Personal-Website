@@ -92,7 +92,7 @@ const HeroSection = () => {
               className="hero__heading"
               onAnimationComplete={() => setAnimationComplete(true)}
             >
-              {['D', 'H', 'R', 'U', 'V'].map((letter, index) => (
+              {['J', 'A', 'C', 'O', 'B'].map((letter, index) => (
                 <motion.span
                   key={index}
                   viewport={{ once: true }}

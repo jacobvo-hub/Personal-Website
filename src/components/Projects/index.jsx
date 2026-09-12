@@ -5,79 +5,62 @@ import { motion } from "framer-motion";
 
 const projects = [
   {
-    heading: "Furnishion | AI Virtual Staging Platform",
+    heading: "Milieu Skin | Brand Content & Storefront Strategy",
     stack: [
-      "Next.js",
-      "TypeScript",
-      "Gemini",
-      "Supabase"
+      "Social Media Strategy",
+      "Content Creation",
+      "Brand Storytelling"
     ],
     bullets: [
-      "Architected an event-driven virtual-staging pipeline for unlimited batch uploads using 5 Inngest workflows and a durable 6-state lifecycle, with concurrency-safe furniture consistency across room views.",
-      "Engineered an image-safety gate using 9,216-pixel structural comparisons, a 15% alteration threshold, hard object blocklists, and a 1-imperfection cap, with audit records and 2 bounded retries.",
-      "Built 7 API endpoints, 8 PostgreSQL tables, and 18 row-level security policies supporting signed uploads, rights attestation, Gemini-based staging, and 4 furniture packages with 8 reference assets."
+      "Led brainstorm sessions with the storefront team, studying social media trends, brand identity, and customer profiles to identify new methods for driving in-person engagement and sales.",
+      "Captured authentic, behind-the-scenes content of the formulation and packaging process to build brand reputation, loyalty, and engagement.",
+      "Documented the business development journey with the leadership team, capturing the process behind achieving a $1.1M pre-seed round."
     ]
   },
   {
-    heading: "Vacha | Tax Optimization Tooling",
+    heading: "Cre.ade | Go-to-Market & Retail Launch",
     stack: [
-      "Next.js",
-      "TypeScript",
-      "Tailwind"
+      "Content Strategy",
+      "Customer Research",
+      "Retail & Wholesale Sales"
     ],
     bullets: [
-      "Built a CPA-vetted tax-planning platform for high-income earners, modeling depreciation schedules, 1031 exchanges, and capital gains under IRS and MACRS guidelines.",
-      "Implemented calculation pipelines for depreciation recapture, exchange timelines, and tax-bracket phase-outs; collaborated with CPAs to validate formulas and deliver scenario-based projections."
+      "Formulated brand content strategy by coordinating input from 3 teammates and interviewing 5+ customers to validate positioning ahead of initial funding pitches.",
+      "Shot, edited, and posted original content built around authentic conversations with strangers about their pain points, building authority and validating product efficacy.",
+      "Established retail contacts with 3+ locations through cold sales, pilot programs, and wholesale deals, building in-person presence across the West Michigan area."
     ],
-    websiteLink: "https://tryvacha.com"
-  },
-
-  {
-    heading: "ThunderQuote | Geospatial Storm Risk Explorer",
-    stack: [
-      "Python",
-      "PyTorch",
-      "D3.js"
-    ],
-    bullets: [
-      "Cleaned and integrated 70MB+ of storm and insurance-claim records across all 50 states, resolving inconsistent geography and producing deterministic data for 3,129 U.S. counties.",
-      "Evaluated Random Forest, Gradient Boosting, and neural-network regressors, reducing average prediction error from approximately $1,841 to $1,237 and achieving approximately 8% testing error.",
-      "Deployed a responsive D3-Geo research explorer to Vercel with GeoPandas artifacts, methodology documentation, accessibility checks, and 21 automated unit and browser tests."
-    ],
-    websiteLink: "https://thunderquote-research-explorer-dhruvjwcs-projects.vercel.app"
-  },
-
-  {
-    heading: "VesselVision | Ophthalmology Deep Learning",
-    stack: [
-      "U-Net",
-      "RAVIR Dataset",
-      "3D Slicer",
-      "Python",
-      "NumPy",
-      "OpenCV"
-    ],
-    bullets: [
-      "Trained a U-Net model for retinal vessel segmentation using RAVIR, reaching ~85% accuracy on vein/artery classification.",
-      "Augmented dataset via manual segmentation in 3D Slicer and geometric transformations to improve generalization.",
-      "Unified manual and automated segmentation workflows to support retinal disease screening at scale."
+    workSamples: [
+      { label: "Video Promotion", link: "https://www.instagram.com/cre.ade/reel/DWW9teFj3WI/" },
+      { label: "Storefront Website", link: "https://creadestore.com/?srsltid=AfmBOopMoCSWsz-6oudyp9-MpSMvZwieY3yXWSQ017T6jNJ3g7I-TbjF" },
     ]
   },
-
   {
-    heading: "Text-to-NFT | Generative AI + Blockchain",
+    heading: "Michigan Healthcare Business Club | Website Rebuild & Campaign",
     stack: [
-      "Stable Diffusion",
-      "React",
-      "Flask",
-      "Google Cloud",
-      "Solidity",
-      "MetaMask"
+      "Web Design",
+      "Social Media Campaigns",
+      "Team Leadership"
     ],
     bullets: [
-      "Led development of a platform converting natural language prompts into NFTs via Stable Diffusion and blockchain minting.",
-      "Built backend image generation pipeline on Google Cloud with Flask APIs, enabling real-time NFT creation and wallet transfer.",
-      "Integrated React frontend with MetaMask for secure wallet connection, successfully minting NFTs during live demo."
+      "Directed a 3-person team to rebuild the club website and launch a new social media campaign, maximizing exposure and student engagement.",
+      "Led coordination of a New York career trek by cold emailing 100+ firms and coordinating the funding team and travel logistics to deliver maximum club value."
+    ],
+    workSamples: [
+      { label: "Video CTA", link: "https://www.instagram.com/michiganmhbc/reel/DTs9bElj5dP/" },
+      { label: "Event Promotion", link: "https://www.instagram.com/p/DdACKUyn0gw/" },
+      { label: "Creative Recap", link: "https://www.instagram.com/p/DWzqYKRFINK/" },
+    ]
+  },
+  {
+    heading: "Purpose Training Studio | Website Overhaul & Content Strategy",
+    stack: [
+      "Website Copy",
+      "Photography & Videography",
+      "Lead Generation"
+    ],
+    bullets: [
+      "Overhauled the existing website and copy alongside leadership, refining style and capturing new photo and video content to decrease friction and increase lead generation overnight.",
+      "Created and refined a content strategy plan with the training team, uncovering ICP pain points to sharpen brand positioning and drive website traffic."
     ]
   }
 ];
@@ -147,8 +130,26 @@ const CardGrid = () => {
             {proj.stack && (
               <RichText
                 className="text-primary-400 text-base dark:text-neutral-300 italic font-light list-none pl-0"
-                content={"Technologies Used: " + proj.stack.join(", ")}
+                content={"Focus Areas: " + proj.stack.join(", ")}
               />
+            )}
+            {proj.workSamples && (
+              <div className="mt-2 text-primary-400 text-base dark:text-neutral-300 italic font-light">
+                Work Samples:{" "}
+                {proj.workSamples.map((sample, i) => (
+                  <span key={sample.link}>
+                    <a
+                      href={sample.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="underline hover:text-primary dark:hover:text-white transition-colors"
+                    >
+                      {sample.label}
+                    </a>
+                    {i < proj.workSamples.length - 1 && ", "}
+                  </span>
+                ))}
+              </div>
             )}
             <div className="flex justify-start relative">
               <div className="flex flex-row justify-center gap-4 py-10">

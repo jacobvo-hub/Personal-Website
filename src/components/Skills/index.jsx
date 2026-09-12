@@ -1,43 +1,50 @@
-import React, { useState, useEffect } from 'react';
+import React from "react";
+import { motion } from "framer-motion";
 
-const SkillIcons = () => {
-  const [perLine, setPerLine] = useState(12);
+const skillGroups = [
+  {
+    category: "Content Creation & Video",
+    skills: ["Photography", "Videography", "Canon", "Adobe Creative Suite", "DaVinci Resolve", "Color Grading"],
+  },
+  {
+    category: "Marketing & Strategy",
+    skills: ["Brand Management", "Content Strategy", "Social Media Strategy", "Go-to-Market Planning"],
+  },
+  {
+    category: "Business Development",
+    skills: ["Cold Outreach", "Retail & Wholesale Sales", "Client Relations", "Event Coordination", "Capital Raising", "Investor Pitches"],
+  },
+];
 
-  const updatePerLine = () => {
-    const width = window.innerWidth;
-    if (width < 640) {
-      setPerLine(4);
-    } else if (width < 768) {
-      setPerLine(5);
-    } else if (width < 1024) {
-      setPerLine(6);
-    } else {
-      setPerLine(8);
-    }
-  };
-
-  useEffect(() => {
-    updatePerLine();
-    window.addEventListener('resize', updatePerLine);
-    return () => window.removeEventListener('resize', updatePerLine);
-  }, []);
-
+const Skills = () => {
   return (
-    <div className="flex w-full justify-center items-center flex-col md:flex-row-reverse transition-all">
-      <div className="w-full flex flex-col items-center justify-center">
-        <img
-          className="w-3/4"
-          src={`https://skillicons.dev/icons?i=python,cpp,c,java,r,ts,django,flask,react,nextjs,nodejs,express,bootstrap,pytorch,tensorflow,sklearn&perline=${perLine}`}
-          alt="My Skills"
-        />
-        <img
-          className="w-3/4 mt-16"
-          src={`https://skillicons.dev/icons?i=git,linux,raspberrypi,idea,androidstudio,postgres,sqlite,prisma&perline=${perLine}`}
-          alt="My Skills"
-        />
-      </div>
+    <div className="flex flex-col gap-10">
+      {skillGroups.map((group, index) => (
+        <motion.div
+          key={group.category}
+          viewport={{ once: true }}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ type: "linear", duration: 0.5, delay: index * 0.1 }}
+          className="flex flex-col items-center gap-4 md:items-start"
+        >
+          <h3 className="text-xl font-display text-primary dark:text-white">
+            {group.category}
+          </h3>
+          <div className="flex flex-wrap justify-center gap-3 md:justify-start">
+            {group.skills.map((skill) => (
+              <span
+                key={skill}
+                className="px-4 py-2 rounded-full bg-gray-100 text-sm text-neutral-700 dark:bg-primary-500 dark:text-neutral-200 filter shadow-sm"
+              >
+                {skill}
+              </span>
+            ))}
+          </div>
+        </motion.div>
+      ))}
     </div>
   );
 };
 
-export default SkillIcons;
+export default Skills;
