@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 const skillGroups = [
   {
     category: "Content Creation & Video",
-    skills: ["Photography", "Videography", "Canon", "Adobe Creative Suite", "DaVinci Resolve", "Color Grading"],
+    skills: ["Photography", "Videography", "Canon", "Adobe Creative Suite", "DaVinci Resolve", "Color Grading", "Sprout", "Opus"],
   },
   {
     category: "Marketing & Strategy",
