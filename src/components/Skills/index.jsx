@@ -12,7 +12,7 @@ const skillGroups = [
   },
   {
     category: "Business Development",
-    skills: ["Cold Outreach", "Retail & Wholesale Sales", "Client Relations", "Event Coordination", "Capital Raising", "Investor Pitches"],
+    skills: ["Cold Outreach", "Retail & Wholesale Sales", "Client Relations", "Event Coordination", "Capital Raising", "Investor Pitches", "Excel"],
   },
 ];
 
